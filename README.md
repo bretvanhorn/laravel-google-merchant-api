@@ -67,7 +67,7 @@ Although backwards compatible, be sure to update your config to be able to use m
 Via composer:
 
 ```bash
-composer require bretvanhorn/laravel-google-merchant-api
+composer require moirei/laravel-google-merchant-api
 ```
 
 Install the service provider (skip for Laravel>=5.5);
@@ -86,7 +86,27 @@ Publish the config
 php artisan vendor:publish --tag="google-merchant-api-config"
 ```
 
+To install this fork for Laravel 10 support, add the following require to your composer.json:
 
+```json
+    "require": {
+	"moirei/laravel-google-merchant-api": "dev-laravel-10"
+    }
+```
+Then add the following to your repositories block in composer.json:
+
+```json
+  {
+      "type": "vcs",
+      "url": "https://github.com/bretvanhorn/laravel-google-merchant-api"
+  }
+```
+
+Then run:
+
+```bash
+    composer update
+```
 
 ## Setup & Authorisation
 
